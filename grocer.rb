@@ -57,9 +57,8 @@ end
 
 def apply_clearance(cart)
   i = 0 
-  clearanced_item = find_item_by_name_in_collection(true, cart[i][:clearance])
   while i < cart.length do 
-    if clearanced_item
+    if cart[i][:clearance]
       cart[i][:price] = cart[i][:price] * (20 / 100).round 
     end
     i += 1 
